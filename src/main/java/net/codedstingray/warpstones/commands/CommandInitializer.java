@@ -27,6 +27,13 @@ public class CommandInitializer {
                 .build();
 
         Sponge.getCommandManager().register(Warpstones.get(), cmdCreate, "createWarpstone"); //TODO: change to childcommand
+
+
+        //TODO: get rid of this one and move it into its own plugin
+        CommandSpec cmdGetKeys = CommandSpec.builder()
+                .executor(new CmdGetKeys())
+                .build();
+        Sponge.getCommandManager().register(Warpstones.get(), cmdGetKeys, "getkeys");
     }
 
     //singleton
